@@ -36,10 +36,17 @@ Android ET iPhone — Safari ne décode pas l'Ogg de façon fiable). Câblé par
   <https://opengameart.org/content/town-theme-rpg>. Licence **CC0**. → village.
 - **`unknown.mp3`** ← *« lost in the unknown »* (OpenGameArt) —
   <https://opengameart.org/content/lost-in-the-unknown>. Licence **CC0**.
-  → émerveillement, labo, forêt.
+  → émerveillement (levé TRE), labo, forêt.
+- **`desert.mp3`** ← *« Desert theme » (caravan)* (OpenGameArt) —
+  <https://opengameart.org/content/desert-theme>. Licence **CC0**.
+  → toutes les scènes DÉSERT (ferraille + sauvetage/décontam/tour ruinée).
+- **`battle.mp3`** ← *« CC0 - Dark Music » (loaben_4)* (OpenGameArt) —
+  <https://opengameart.org/content/cc0-dark-music>. Licence **CC0**.
+  → scènes de DANGER hors désert (poursuite canopée, remparts).
 - **`dungeon.mp3`** ← *« Loopable Dungeon Ambience »* (OpenGameArt) —
   <https://opengameart.org/content/loopable-dungeon-ambience>. Licence **CC0**.
-  → tension, ferraille, souterrain.
+  → **souterrain UNIQUEMENT** (galerie, sismique) : les gouttes d'eau n'ont de sens
+  que sous terre (avant, à tort, en plein désert — corrigé 2026-07-08).
 
 ### `audio/sfx/` — effets
 - **`bow.mp3`** ← *« Bow & Arrow Shot »* (OpenGameArt) —

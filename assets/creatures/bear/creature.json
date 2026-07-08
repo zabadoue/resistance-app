@@ -1,0 +1,14 @@
+{
+  "_source": "LPC grizzly bear by bluecarrot16 et al. (OpenGameArt, CC-BY 4.0) — voir ATTRIBUTION.md",
+  "_layout": "320x768 @ 64x64 = 5 col x 12 lignes. Blocs : marche (lignes 0-3), attaque (4-7), chute (8-11). Ordre des directions DANS chaque bloc (verifie a l'ecran, flipX=false=vers la DROITE) : 0=dos, 1=DROITE, 2=gauche, 3=face. Ligne DROITE = 2e de chaque bloc.",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "scale": 1,
+  "originY": 0.92,
+  "anims": {
+    "idle":   { "frames": [5], "frameRate": 4, "repeat": -1 },
+    "walk":   { "frames": [5, 6, 7, 8, 9], "frameRate": 9, "repeat": -1 },
+    "attack": { "frames": [25, 26, 27, 28, 29], "frameRate": 11, "repeat": 0 },
+    "sleep":  { "frames": [5], "frameRate": 1, "repeat": -1 }
+  }
+}

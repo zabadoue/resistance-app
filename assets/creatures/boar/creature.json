@@ -1,0 +1,13 @@
+{
+  "_source": "LPC lion by bluecarrot16 et al. (OpenGameArt, CC-BY 4.0) — voir ATTRIBUTION.md. Place dans le slot 'boar' (gros predateur fonceur).",
+  "_layout": "320x256 @ 64x64 = 5 col x 4 lignes. Marche seule, une ligne par direction (VERIFIE a l'ecran : cette feuille N'a PAS l'ordre de bear/fox) : 0=face, 1=gauche, 2=DROITE, 3=dos. flipX=false=vers la DROITE → ligne DROITE = ligne 2 (frames 10-14).",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "scale": 1,
+  "originY": 0.92,
+  "anims": {
+    "idle":  { "frames": [10], "frameRate": 4, "repeat": -1 },
+    "walk":  { "frames": [10, 11, 12, 13, 14], "frameRate": 9, "repeat": -1 },
+    "sleep": { "frames": [10], "frameRate": 1, "repeat": -1 }
+  }
+}

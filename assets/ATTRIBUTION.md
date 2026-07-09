@@ -48,6 +48,24 @@ Android ET iPhone — Safari ne décode pas l'Ogg de façon fiable). Câblé par
   → **souterrain UNIQUEMENT** (galerie, sismique) : les gouttes d'eau n'ont de sens
   que sous terre (avant, à tort, en plein désert — corrigé 2026-07-08).
 
+Variété (2026-07-08) — chaque ambiance pioche parmi PLUSIEURS pistes (cf.
+`SoundBank.MOOD_MUSIC`), la plupart **CC0** (OpenGameArt) :
+- **`village2.mp3`** ← *« Feel Good Island Loop »* —
+  <https://opengameart.org/content/feel-good-island-loop>. **CC0**. → village (2ᵉ).
+- **`wonder2.mp3`** ← *« First Light Particles »* —
+  <https://opengameart.org/content/first-light-particles-–-cc0-atmospheric-pianoambient-track>.
+  **CC0**. → émerveillement (2ᵉ, piano atmosphérique).
+- **`lab.mp3`** ← *« forgotten path »* —
+  <https://opengameart.org/content/forgotten-path>. **CC0**. → labo.
+- **`forest.mp3`** ← *« Forest Exploration »* —
+  <https://opengameart.org/content/forest-exploration>. Licence **CC-BY 4.0**
+  (attribution requise). → forêt.
+- **`tension2.mp3`** ← *« Music loop, strong, downtempo, seamless »* —
+  <https://opengameart.org/content/music-loop-strong-downtempo-seamless>. **CC0**.
+  → danger (2ᵉ).
+- **`mystery2.mp3`** ← *« CC0 - Mystery » (mystery exploration)* —
+  <https://opengameart.org/content/cc0-mystery>. **CC0**. → souterrain / labo (2ᵉ).
+
 ### `audio/sfx/` — effets
 - **`bow.mp3`** ← *« Bow & Arrow Shot »* (OpenGameArt) —
   <https://opengameart.org/content/bow-arrow-shot>. Licence **CC-BY 3.0**

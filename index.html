@@ -13,6 +13,16 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" type="image/png" href="icon-192.png" />
   <link rel="apple-touch-icon" href="icon-192.png" />
+  <!-- Service worker : mise à jour AUTO (network-first) — plus jamais besoin de
+       réinstaller le jeu pour voir un correctif. `updateViaCache:'none'` force le
+       navigateur à revérifier sw.js à chaque fois (pas de SW figé en cache). -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).catch(() => {});
+      });
+    }
+  </script>
   <title>Résistance — Projet Été 2026 (reboot)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

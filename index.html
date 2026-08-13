@@ -38,10 +38,70 @@
       -webkit-tap-highlight-color: transparent; overscroll-behavior: none;
     }
     canvas { touch-action: none; }
+
+    /* ── ÉCRAN DE CHARGEMENT (HTML pur) ──────────────────────────────────────
+       Il s'affiche dès que l'index arrive, AVANT que le bundle JS ne soit
+       téléchargé/parsé — donc pendant les secondes où Phaser n'existe pas encore
+       et où l'écran serait autrement NOIR et muet. `main.ts` l'efface dès que la
+       première scène est dessinée (cf. systems/BootSplash.ts). */
+    #boot {
+      position: fixed; inset: 0; z-index: 10;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 18px; background: #1a1410; color: #f2e4c9; text-align: center; padding: 24px;
+      transition: opacity .45s ease;
+    }
+    #boot.boot-gone { opacity: 0; pointer-events: none; }
+    .boot-title {
+      font-size: clamp(34px, 9vw, 62px); font-weight: 700; letter-spacing: .06em;
+      color: #ffcf6b; text-shadow: 0 3px 0 #1a0f06;
+    }
+    .boot-sub { font-size: clamp(13px, 3.2vw, 16px); opacity: .8; }
+    .boot-bar {
+      width: min(260px, 62vw); height: 6px; border-radius: 3px;
+      background: #2e2419; overflow: hidden;
+    }
+    .boot-bar i {
+      display: block; width: 40%; height: 100%; border-radius: 3px;
+      background: linear-gradient(90deg, #7a5c22, #ffcf6b, #7a5c22);
+      animation: boot-slide 1.15s ease-in-out infinite;
+    }
+    @keyframes boot-slide {
+      0%   { transform: translateX(-105%); }
+      100% { transform: translateX(255%); }
+    }
+    .boot-tip { font-size: clamp(11px, 2.8vw, 13px); font-style: italic; opacity: .55; max-width: 30ch; }
+    /* Message de secours si le bundle ne charge jamais (réseau coupé en plein
+       téléchargement, cache corrompu) — sinon la barre tournerait à l'infini. */
+    #boot-stuck { display: none; font-size: 13px; opacity: .85; }
+    #boot-stuck button {
+      margin-top: 10px; padding: 9px 18px; border: 0; border-radius: 8px; cursor: pointer;
+      font-family: inherit; font-size: 14px; background: #1f6f4a; color: #f2e4c9;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .boot-bar i { animation-duration: 3s; }
+    }
   </style>
-  <script type="module" crossorigin src="./assets/index-ReUZByDe.js"></script>
+  <script type="module" crossorigin src="./assets/index-BWpNZwx5.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/phaser-0RJB29YE.js">
 </head>
-<body>
+<body>
+  <div id="boot" role="status" aria-live="polite">
+    <div class="boot-title">RÉSISTANCE</div>
+    <div class="boot-sub">Chargement du monde…</div>
+    <div class="boot-bar"><i></i></div>
+    <div class="boot-tip">Un scientifique-archer soigne un monde malade</div>
+    <div id="boot-stuck">
+      Le chargement est bien long — la connexion est peut-être coupée.
+      <br /><button type="button" onclick="location.reload()">Réessayer</button>
+    </div>
+  </div>
+  <script>
+    // Chien de garde du chargement : volontairement en script INLINE (donc exécuté
+    // même si le bundle module échoue à se charger ou à s'évaluer).
+    window.__bootStuckTimer = setTimeout(function () {
+      var el = document.getElementById('boot-stuck');
+      if (el) el.style.display = 'block';
+    }, 20000);
+  </script>
 </body>
 </html>
